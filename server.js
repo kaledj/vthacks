@@ -88,8 +88,8 @@ server.listen(process.env.PORT, function(){
 
 function getTweets(callback){
   var client = new twitter({
-        consumer_key : "TDNLSTTz8P9AVHnCgLyCw7pPZ",
-        consumer_secret : "6W5NxEQEZRL9SFp1Nx2rKHg0dE1w3lGqKpiOpJe0eHDNorYSrB",
+        consumer_key : "tVbuGxuozzM85fsC3P8ZdwdhR",
+        consumer_secret : "4SUnMeuWCFp2QhoxpjtysiodmlZ7riDb88Pjwr7KAm79axs7NZ",
         access_token_key : "2844620313-CaBkrSwj4jsWtXIEw2DhOHN1ZyZEBDLIcaQzyTN",
         access_token_secret : "ucaOKKi3dOEsPyXdPyW5OYBjxdR7MPOJYUNzptHi0A3Cb"
     })
@@ -116,8 +116,8 @@ client.get('https://api.twitter.com/1.1/search/tweets.json?count=2&q=%23superbow
 router.get("/", function (req, res) {
   var ejs = require('ejs');
   getTweets(function (data) {
+    //console.log(data);
     var fullobj = JSON.parse(data).statuses[0];
-    console.log(data);
     var data = {
       //tweettext: fullobj.text,
       //tweetsname: fullobj.user.screen_name,

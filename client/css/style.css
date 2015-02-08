@@ -24,3 +24,7 @@ label, input {
 .box {
     height: auto;
 }
+.player {
+    margin:0 auto;
+    text-align: center;
+}
