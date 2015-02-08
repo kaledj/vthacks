@@ -37,6 +37,10 @@
 
             });
             };
+            function getHashtag(){
+                var hashtag = document.getElementById('hashtag').value;
+                console.log("hashtag")
+            };
         </script>
     </head>
     <body style="background: url('img/breisawesome.png') no-repeat center center; background-size:'cover' ">
@@ -44,6 +48,12 @@
             <img src="img/Twitlogo.png" height="200px"/>
         </div>
         <div class="container">
+            <div class="row" align="center">
+                <input type="text"  id="hashtag" style="width:'50px';" placeholder= "Enter hashtag">
+            </div>
+            <div class="row" align="center">
+                <button type="button" onclick="getHashtag()" height="50px" width="100px"/>Sync with hashtag</button>
+            </div>
             <div class = "row">
                 <div>
                     <div class="row" align="center">
