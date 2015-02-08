@@ -6,6 +6,13 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script>
+        var multilevel = require('multilevel')
+        var net = require('net')
+         
+        var db = multilevel.client()
+        var con = net.connect(3000)
+        
+        con.pipe(db.createRpcStream()).pipe(con)
             function printArtistID(){
                 var title = document.getElementById('title').value;
                 title = title.replace(" ", "%20");
