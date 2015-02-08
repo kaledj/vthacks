@@ -70,11 +70,11 @@
                     </div>
                 </div>
                 <div class="jumbotron" style="background-color: #27292B; color:'red';">
-                    <h1>Tweets</h1>
+                    <h1 class="tweet">Tweets</h1>
                         <ul>
                             <% for(var i=0; i<tweetdict.length; i++) {%>
                                     <li>
-                                    <p><%= tweetdict[i].tweetsname %></p>
+                                    <p class="tweet"><%= tweetdict[i].tweetsname %></p>
                                     <div>
                                         <img src=<%= tweetdict[i].profilepic %>>
                                     <blockquote class="tweet"><%= tweetdict[i].tweettext %>

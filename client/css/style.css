@@ -1,7 +1,7 @@
 .tweet{
 
     overflow: hidden;
-    color:'red';
+    color:white;
 }
 .jumbotron{
     background-color: #ffffff;
@@ -13,6 +13,11 @@
     opacity: 1.0;
     filter: alpha(opacity=100);
 }
+h1.tweet {
+  font-weight: normal;
+  color: white;
+}
+
 #twitterPic {
 
     width: 50px;
