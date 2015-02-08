@@ -9,6 +9,9 @@ var twitter = require('twitter');
 var async = require('async');
 var socketio = require('socket.io');
 var express = require('express');
+var net = require('net');
+var DB = require('db.js');
+var multilevel = require('multilevel');
 
 //
 // ## SimpleServer `SimpleServer(obj)`
@@ -27,6 +30,11 @@ router.use(express.static(__dirname + "/client"));
 
 var messages = [];
 var sockets = [];
+
+var database = new DB({URI: '/tmp/vthacks.db'});
+net.createServer(function (c) {
+	c.pipe(multilevel.server(database.db)).pipe(c);
+}).listen(3000);
 
 io.on('connection', function (socket) {
     messages.forEach(function (data) {
@@ -138,3 +146,6 @@ router.get("/", function (req, res) {
     });
   });
 })
+
+module.exports = router;
+
