@@ -19,7 +19,7 @@
 
                 $.getJSON(url, function(data, status){
                     if (data.response.songs.length === 0){
-                        window.alert("Song not found");
+                        alert("Song not found");
                         return;
                     }
                     console.log(data);
@@ -39,7 +39,7 @@
             };
             function getHashtag(){
                 var hashtag = document.getElementById('hashtag').value;
-                console.log(hashtag)
+                console.log("hashtag")
             };
         </script>
     </head>
